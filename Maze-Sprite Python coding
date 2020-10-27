@@ -1,0 +1,55 @@
+from mblock import event
+import time
+
+@event.greenflag
+def on_greenflag():
+    sprite.x = 38
+    sprite.y = 111
+    time.sleep(1)
+    sprite.x = 75
+    sprite.y = 111
+    sprite.say('Hello!', 1)
+    sprite.play('meow')
+    while not sprite.is_keypressed('space'):
+        sprite.x = -11
+        sprite.y = 111
+        time.sleep(1)
+        sprite.say('I am ready to start', 2)
+        sprite.play('meow')
+        sprite.set_costume('costume1')
+        sprite.glide(105, 111, 2)
+        time.sleep(1)
+        sprite.glide(105, 70, 1)
+        time.sleep(1)
+        sprite.glide(85, 50, 2)
+        time.sleep(1)
+        sprite.glide(85, 10, 1)
+        time.sleep(1)
+        sprite.glide(105, 10, 1)
+        time.sleep(1)
+        sprite.glide(105, -105, 1)
+        time.sleep(1)
+        sprite.glide(55, -105, 1)
+        time.sleep(1)
+        sprite.glide(55, -85, 1)
+        time.sleep(1)
+        sprite.glide(85, -75, 1)
+        time.sleep(1)
+        sprite.glide(85, -37, 1)
+        time.sleep(2)
+        sprite.glide(60, -40, 1)
+        time.sleep(1)
+        sprite.glide(60, -15, 1)
+        time.sleep(1)
+        sprite.glide(10, -15, 1)
+        time.sleep(1)
+        sprite.glide(10, -65, 1)
+        time.sleep(1)
+        sprite.glide(-10, -65, 1)
+        time.sleep(1)
+        sprite.glide(-10, -110, 1)
+        time.sleep(1)
+        sprite.glide(10, -110, 1)
+        time.sleep(1)
+        sprite.glide(10, -120, 1)
+        time.sleep(2)
